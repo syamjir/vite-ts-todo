@@ -55,13 +55,18 @@ export function App() {
   }
 
   return (
-    <div>
+    <div className='h-screen flex flex-col items-center justify-top gap-10 mt-12  p-1'>
       <Header />
-      <form onSubmit={(e) => handleAddTodo(editId, e)}>
+      <form
+        onSubmit={(e) => handleAddTodo(editId, e)}
+        className='flex flex-col gap-3'
+      >
         <Input inputValue={inputValue} setInputValue={setInputValue} />
-        <Button style=''>{isEdit ? 'Edit Todo' : 'Add Todo'}</Button>
+        <Button style={'w-full border-2 border-fuchsia-400'}>
+          {isEdit ? 'Edit Todo' : 'Add Todo'}
+        </Button>
       </form>
-      <div>
+      <div className='flex border-t-2 border-b-2 border-blue-400 flex-col gap-3 h-[23.5rem] overflow-y-scroll py-4 rounded-md px-5'>
         {items.map((item) => (
           <Todo
             key={item.id}
