@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Header } from './components/Header'
 import { Input } from './components/Input'
 import { Button } from './components/Button'
-import { Todo } from './components/ToDo'
+import { Todo } from './components/Todo'
 
 export type Items = {
   todo: string
